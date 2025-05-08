@@ -88,7 +88,7 @@ export default function PostUpdateModal({
       event.target.value = ""; // Reset file input
     }
   };
-
+  // Update post
   const updatePost = async () => {
     const userId = user?.id;
     try {

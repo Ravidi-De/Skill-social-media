@@ -78,6 +78,7 @@ export default function SkillPostFeed({ editable = false }) {
   //   setCurrentMediaIndex(prev => (prev < currentPostMedia.length - 1 ? prev + 1 : 0));
   // };
 
+  // post delete
   const handleDelete = async (postId) => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {

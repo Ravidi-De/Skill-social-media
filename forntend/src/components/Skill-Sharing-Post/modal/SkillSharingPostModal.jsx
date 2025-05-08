@@ -1,20 +1,16 @@
-import React, { useState, useRef, useContext } from "react";
-import { Modal } from "react-bootstrap";
-import { UserContext } from "../../../common/UserContext";
-import profileImg from "../../../assets/images/profile.png";
-import { uploadToCloudinary } from "../../utils/uploadToCloudinary";
-import axios from "axios";
-import Swal from "sweetalert2";
+import React, { useState, useRef, useContext } from 'react';
+import { Modal } from 'react-bootstrap';
+import { UserContext } from '../../../common/UserContext';
+import profileImg from '../../../assets/images/profile.png';
+import { uploadToCloudinary } from '../../utils/uploadToCloudinary';
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
-export default function SkillSharingPostModal({
-  show,
-  handleClose,
-  onPostCreated,
-}) {
+export default function SkillSharingPostModal({ show, handleClose, onPostCreated }) {
   const { user } = useContext(UserContext);
   const [images, setImages] = useState([]);
   const [video, setVideo] = useState(null);
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const imageInputRef = useRef(null);
   const videoInputRef = useRef(null);
@@ -28,14 +24,14 @@ export default function SkillSharingPostModal({
   const removeVideo = () => {
     setVideo(null);
   };
-  // Image upload
+
   const handleImageUpload = async (event) => {
     try {
       setIsLoading(true);
       const imageUrl = await uploadToCloudinary(event.target.files[0], "image");
-      setImages((prev) => [...prev, { url: imageUrl }]);
+      setImages(prev => [...prev, { url: imageUrl }]);
     } catch (error) {
-      console.error("Error uploading image:", error);
+      console.error('Error uploading image:', error);
     } finally {
       setIsLoading(false);
     }
@@ -47,7 +43,7 @@ export default function SkillSharingPostModal({
       const videoUrl = await uploadToCloudinary(event.target.files[0], "video");
       setVideo({ url: videoUrl });
     } catch (error) {
-      console.error("Error uploading video:", error);
+      console.error('Error uploading video:', error);
     } finally {
       setIsLoading(false);
     }
@@ -55,10 +51,7 @@ export default function SkillSharingPostModal({
 
   const createPost = async (postData) => {
     try {
-      const response = await axios.post(
-        `http://localhost:8080/api/v1/post`,
-        postData
-      );
+      const response = await axios.post(`http://localhost:8080/api/v1/post`, postData);
       Swal.fire({
         icon: "success",
         title: "Learning Plan Created Successfully!",
@@ -71,7 +64,7 @@ export default function SkillSharingPostModal({
       window.location.reload();
       return response.data;
     } catch (error) {
-      console.error("Error creating post:", error);
+      console.error('Error creating post:', error);
       throw error;
     }
   };
@@ -82,25 +75,26 @@ export default function SkillSharingPostModal({
 
     try {
       setIsLoading(true);
-
+      
       const postData = {
         description,
-        imageUrls: images.map((img) => img.url),
+        imageUrls: images.map(img => img.url),
         videoUrl: video?.url || null,
-        userId: user.id,
+        userId: user.id 
       };
 
       const createdPost = await createPost(postData);
-      console.log("Post created:", createdPost);
-
-      setDescription("");
+      console.log('Post created:', createdPost);
+      
+      setDescription('');
       setImages([]);
       setVideo(null);
-
+      
       handleClose();
       if (onPostCreated) onPostCreated(createdPost);
+      
     } catch (error) {
-      console.error("Error creating post:", error);
+      console.error('Error creating post:', error);
     } finally {
       setIsLoading(false);
     }
@@ -113,39 +107,34 @@ export default function SkillSharingPostModal({
       </Modal.Header>
       <Modal.Body>
         <div className="d-flex align-items-center bg-light p-3 mb-3">
-          <img
-            src={user?.profilePicture || profileImg}
-            alt="Profile"
-            className="rounded-circle me-3"
-            width="40"
-            height="40"
+          <img 
+            src={user?.profilePicture || profileImg} 
+            alt="Profile" 
+            className="rounded-circle me-3" 
+            width="40" 
+            height="40" 
           />
-          <span className="fw-bold">{user?.username || "User"}</span>
+          <span className="fw-bold">{user?.username || 'User'}</span>
         </div>
-
-        <textarea
-          className="form-control mb-3"
-          rows="4"
-          placeholder={`What skill are you sharing today, ${
-            user?.username || "User"
-          }?`}
+        
+        <textarea 
+          className="form-control mb-3" 
+          rows="4" 
+          placeholder={`What skill are you sharing today, ${user?.username || 'User'}?`}
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         ></textarea>
-
+        
         <div className="upload-preview d-flex flex-wrap mb-3">
           {images.map((image, index) => (
-            <div
-              key={index}
-              className="image-preview position-relative me-2 mb-2"
-            >
-              <img
-                src={image.url}
-                alt={`Preview ${index + 1}`}
+            <div key={index} className="image-preview position-relative me-2 mb-2">
+              <img 
+                src={image.url} 
+                alt={`Preview ${index + 1}`} 
                 className="img-thumbnail"
-                style={{ width: "100px", height: "100px", objectFit: "cover" }}
+                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
               />
-              <button
+              <button 
                 className="btn btn-danger btn-sm position-absolute top-0 end-0"
                 onClick={() => removeImage(index)}
               >
@@ -153,16 +142,16 @@ export default function SkillSharingPostModal({
               </button>
             </div>
           ))}
-
+          
           {video && (
             <div className="video-preview position-relative me-2 mb-2">
-              <video
-                src={video.url}
+              <video 
+                src={video.url} 
                 className="img-thumbnail"
-                style={{ width: "100px", height: "100px", objectFit: "cover" }}
+                style={{ width: '100px', height: '100px', objectFit: 'cover' }}
                 controls
               />
-              <button
+              <button 
                 className="btn btn-danger btn-sm position-absolute top-0 end-0"
                 onClick={removeVideo}
               >
@@ -170,46 +159,46 @@ export default function SkillSharingPostModal({
               </button>
             </div>
           )}
-
+          
           {(images.length < 3 || !video) && (
             <div className="upload-buttons d-flex">
               {images.length < 3 && (
                 <>
-                  <input
-                    type="file"
+                  <input 
+                    type="file" 
                     ref={imageInputRef}
                     onChange={handleImageUpload}
                     accept="image/*"
                     multiple
                     className="d-none"
                   />
-                  <button
+                  <button 
                     className="btn btn-outline-secondary me-2"
                     onClick={() => imageInputRef.current.click()}
                     disabled={isLoading}
                   >
                     <i className="fas fa-image me-2"></i>
-                    {isLoading ? "Uploading..." : "Add Photo"}
+                    {isLoading ? 'Uploading...' : 'Add Photo'}
                   </button>
                 </>
               )}
-
+              
               {!video && (
                 <>
-                  <input
-                    type="file"
+                  <input 
+                    type="file" 
                     ref={videoInputRef}
                     onChange={handleVideoUpload}
                     accept="video/*"
                     className="d-none"
                   />
-                  <button
+                  <button 
                     className="btn btn-outline-secondary"
                     onClick={() => videoInputRef.current.click()}
                     disabled={isLoading}
                   >
                     <i className="fas fa-video me-2"></i>
-                    {isLoading ? "Uploading..." : "Add Video"}
+                    {isLoading ? 'Uploading...' : 'Add Video'}
                   </button>
                 </>
               )}
@@ -218,14 +207,12 @@ export default function SkillSharingPostModal({
         </div>
       </Modal.Body>
       <Modal.Footer>
-        <button
+        <button 
           className="btn btn-primary w-100"
           onClick={handleSubmit}
-          disabled={
-            !description || (images?.length === 0 && !video) || isLoading
-          }
+          disabled={!description || (images?.length === 0 && !video) || isLoading}
         >
-          {isLoading ? "Posting..." : "Post"}
+          {isLoading ? 'Posting...' : 'Post'}
         </button>
       </Modal.Footer>
     </Modal>

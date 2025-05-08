@@ -152,7 +152,7 @@ export default function SkillPostFeed({ editable = false }) {
     }
   };
 
-  //handle like
+  // handle post like
   const handleLike = async (postId) => {
     const userId = user?.id;
     try {

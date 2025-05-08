@@ -216,7 +216,7 @@ export default function Posts({ editable = false }) {
           </div>
         </div>
       ))}
-
+      {/* Model */}
       {showModal && (
         <div className="posts__modal">
           <div

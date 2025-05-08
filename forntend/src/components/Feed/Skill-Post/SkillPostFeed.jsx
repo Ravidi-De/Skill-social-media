@@ -165,7 +165,7 @@ export default function SkillPostFeed({ editable = false }) {
         [postId]: prev[postId] + (likedPosts[postId] ? -1 : 1),
       }));
     } catch (err) {
-      console.error("Error liking post:", err);
+      console.error("Error when liking post:", err);
     }
   };
 

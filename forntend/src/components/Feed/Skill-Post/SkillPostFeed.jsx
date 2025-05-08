@@ -124,7 +124,7 @@ export default function SkillPostFeed({ editable = false }) {
       console.log(response, "comment deleted");
       fetchPosts();
     } catch (e) {
-      console.log(e, "comment delete error");
+      console.log(e, "Error! when deleting comment");
     }
   };
   // Update comment

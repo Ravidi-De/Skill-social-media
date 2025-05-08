@@ -155,6 +155,7 @@ export default function Posts({ editable = false }) {
 
   if (loading) return <div className="posts__loading">Loading posts...</div>;
   if (error) return <div className="posts__error">Error: {error}</div>;
+  // When post empty
   if (posts.length === 0)
     return <div className="posts__empty">No posts to display</div>;
 

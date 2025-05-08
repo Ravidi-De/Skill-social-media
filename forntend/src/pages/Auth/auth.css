@@ -1,0 +1,415 @@
+.fb-auth-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f2f5;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.fb-auth-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+}
+
+.fb-brand-section {
+  flex: 1;
+  padding-right: 2rem;
+  max-width: 500px;
+}
+
+.fb-logo {
+  color: #1877f2;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.fb-tagline {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  color: #1c1e21;
+}
+
+.fb-form-section {
+  flex: 1;
+  max-width: 400px;
+}
+
+.fb-card,
+.fb-signup-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.fb-signup-card {
+  padding-bottom: 2rem;
+}
+
+.fb-signup-header {
+  padding-bottom: 0.5rem;
+}
+
+.fb-signup-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.fb-signup-header p {
+  color: #606770;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.fb-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-input-group {
+  position: relative;
+  margin-bottom: 0.875rem;
+}
+
+.fb-input-group input,
+.fb-name-row input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid #dddfe2;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.fb-input-group input:focus,
+.fb-name-row input:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px #e7f3ff;
+}
+
+.fb-name-row {
+  display: flex;
+  gap: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.fb-password-toggle {
+  position: absolute;
+  right: 0.875rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #606770;
+  cursor: pointer;
+}
+
+.fb-login-btn,
+.fb-signup-btn {
+  background-color: #1877f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.625rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.fb-login-btn:hover,
+.fb-signup-btn:hover {
+  background-color: #166fe5;
+}
+
+.fb-signup-btn {
+  background-color: #42b72a;
+  font-size: 1.125rem;
+  padding: 0.625rem 2rem;
+  margin: 1rem auto;
+  display: block;
+  width: auto;
+}
+
+.fb-signup-btn:hover {
+  background-color: #36a420;
+}
+
+.fb-divider {
+  border-bottom: 1px solid #dadde1;
+  margin: 1rem 0;
+}
+
+.fb-forgot-link {
+  color: #1877f2;
+  font-size: 0.875rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.fb-forgot-link:hover {
+  text-decoration: underline;
+}
+
+.fb-create-btn {
+  background-color: #42b72a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.0625rem;
+  font-weight: bold;
+  padding: 0.75rem 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+}
+
+.fb-create-btn:hover {
+  background-color: #36a420;
+}
+
+.fb-create-page {
+  text-align: center;
+  margin-top: 1.75rem;
+  font-size: 0.875rem;
+}
+
+.fb-create-page a {
+  font-weight: bold;
+  color: #1c1e21;
+  text-decoration: none;
+}
+
+.fb-create-page a:hover {
+  text-decoration: underline;
+}
+
+.fb-birthday-section,
+.fb-gender-section {
+  margin-bottom: 1rem;
+}
+
+.fb-birthday-section label,
+.fb-gender-section label {
+  color: #606770;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.fb-birthday-selects {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.fb-birthday-selects select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccd0d5;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+  background-color: white;
+}
+
+.fb-gender-options {
+  display: flex;
+  gap: 0.875rem;
+}
+
+.fb-radio-label {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccd0d5;
+  border-radius: 4px;
+  font-size: 0.9375rem;
+}
+
+.fb-radio-label input {
+  margin-right: 0.5rem;
+}
+
+.fb-terms {
+  color: #777;
+  font-size: 0.75rem;
+  margin: 1rem 0;
+}
+
+.fb-terms a {
+  color: #385898;
+  text-decoration: none;
+}
+
+.fb-terms a:hover {
+  text-decoration: underline;
+}
+
+.fb-login-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.fb-login-link a {
+  color: #1877f2;
+  text-decoration: none;
+}
+
+.fb-login-link a:hover {
+  text-decoration: underline;
+}
+
+.fb-footer {
+  background-color: white;
+  padding: 1.5rem 0;
+  margin-top: auto;
+}
+
+.fb-footer-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.fb-language {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  color: #737373;
+  font-size: 0.75rem;
+}
+
+.fb-language span {
+  cursor: pointer;
+}
+
+.fb-language span:hover {
+  text-decoration: underline;
+}
+
+.fb-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.fb-footer-links a {
+  color: #737373;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+.fb-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.fb-copyright {
+  color: #737373;
+  font-size: 0.75rem;
+  margin: 1.25rem 0 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .fb-auth-content {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .fb-brand-section {
+    padding: 2rem 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .fb-form-section {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem 2rem;
+  }
+
+  .fb-card,
+  .fb-signup-card {
+    max-width: 400px;
+    margin: 0 auto 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .fb-brand-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .fb-logo {
+    font-size: 2.5rem;
+  }
+
+  .fb-tagline {
+    font-size: 1.25rem;
+  }
+
+  .fb-name-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fb-gender-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .fb-birthday-selects {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.google-login-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.google-login-btn span {
+  margin: 0;
+  line-height: 2;
+}
+
+.google-login-btn img {
+  height: 40px;
+  width: 40px;
+  margin: 3px;
+}
+
+.google-login-btn:hover {
+  background-color: #f5f5f5;
+}

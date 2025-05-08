@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/.cache/
+node_modules/
+.npm/
+.yarn/
+
+# Build files
+build/
+dist/
+.next/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs and system files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.swp

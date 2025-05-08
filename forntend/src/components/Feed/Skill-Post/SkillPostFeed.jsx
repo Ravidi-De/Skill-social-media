@@ -239,7 +239,7 @@ export default function SkillPostFeed({ editable = false }) {
       </div>
     );
   };
-
+  // handle empty post
   if (loading) return <div className="posts__loading">Loading posts...</div>;
   if (error) return <div className="posts__error">Error: {error}</div>;
   if (posts.length === 0)

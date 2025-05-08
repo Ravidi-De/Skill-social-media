@@ -1,0 +1,32 @@
+.upload-post-container {
+  max-width: 700px;
+  margin: 0 auto;
+  display: block; /* Ensure it's displayed as a block element */
+}
+
+.upload-post-container input {
+  background-color: #f0f2f5;
+  border: none;
+  padding: 10px 15px;
+}
+
+.upload-post-container .btn {
+  flex-grow: 1;
+  margin: 0 5px;
+  color: #65676B;
+}
+
+.upload-post-container .btn i {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.upload-post-container .btn:hover {
+  background-color: #f0f2f5;
+}
+
+/* Add this to ensure main content is visible */
+.main-content {
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}

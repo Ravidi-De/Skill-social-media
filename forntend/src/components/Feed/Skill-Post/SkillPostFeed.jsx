@@ -113,7 +113,7 @@ export default function SkillPostFeed({ editable = false }) {
       console.log(e, "comment add error");
     }
   };
-
+  // Delete comment
   const handleDeleteComment = async (postId, commentId) => {
     const id = user?.id;
     try {

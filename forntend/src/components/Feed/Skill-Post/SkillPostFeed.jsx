@@ -126,7 +126,7 @@ export default function SkillPostFeed({ editable = false }) {
       console.log(e, "comment delete error");
     }
   };
-
+  // Update comment
   const handleEditComment = (postId, commentId, existingComment) => {
     setEditComment(existingComment);
     setEditCommentId(commentId);

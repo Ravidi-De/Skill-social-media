@@ -111,7 +111,7 @@ export default function SkillPostFeed({ editable = false }) {
       fetchPosts();
       setCommentInputs((prev) => ({ ...prev, [postId]: "" }));
     } catch (e) {
-      console.log(e, "comment add error");
+      console.log(e, "Error! when create new comment");
     }
   };
   // Delete comment

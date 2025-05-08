@@ -16,7 +16,6 @@ import LearningPlanPostFeed from "../../components/Feed/Plan/LearningPlanPostFee
 import LearningProgressPostFeed from "../../components/Feed/Progress/LearningProgressPostFeed";
 
 export default function Home() {
-  //get user from application storage
   const { user } = useContext(UserContext);
   const [showPostModal, setShowPostModal] = useState(false);
   const [showLearningPostModal, setShowLearningPostModal] = useState(false);

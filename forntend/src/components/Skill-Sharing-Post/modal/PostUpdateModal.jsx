@@ -66,7 +66,7 @@ export default function PostUpdateModal({
       event.target.value = ""; // Reset file input
     }
   };
-
+  // Handle video upload
   const handleVideoUpload = async (event) => {
     if (!event.target.files || event.target.files.length === 0) {
       return;

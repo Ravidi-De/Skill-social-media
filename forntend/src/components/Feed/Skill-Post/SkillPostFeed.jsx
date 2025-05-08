@@ -133,7 +133,7 @@ export default function SkillPostFeed({ editable = false }) {
     setEditPostId(postId);
     setShowEditModal(true);
   };
-
+  // Save comment after update
   const handleSaveEditedComment = async () => {
     const id = user?.id;
     try {

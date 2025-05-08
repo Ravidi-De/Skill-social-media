@@ -1,0 +1,35 @@
+.progress-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.progress-item {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+.progress-item:hover {
+    background-color: #e9ecef;
+}
+
+/* Custom scrollbar */
+.progress-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.progress-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.progress-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.progress-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

@@ -355,6 +355,7 @@ export default function SkillPostFeed({ editable = false }) {
                   }))
                 }
               />
+              {/* Add comment button */}
               <button
                 onClick={() => handleAddComment(post.postId)}
                 className="styled-comment-submit"

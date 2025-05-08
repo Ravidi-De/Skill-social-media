@@ -1,0 +1,340 @@
+/* Learning Plan Posts - Matching Flat Design */
+
+.learning-plan__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+  
+  .learning-plan__card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    padding: 16px;
+    border: 1px solid #f0f0f0;
+  }
+  
+  .learning-plan__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .learning-plan__user-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .learning-plan__profile-pic {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+  }
+  
+  .learning-plan__name-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .learning-plan__user-name {
+    font-weight: 600;
+    margin: 0;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .learning-plan__timestamp {
+    font-size: 12px;
+    color: #888;
+    margin-top: 2px;
+  }
+  
+  .learning-plan__body {
+    padding: 16px 8px;
+  }
+  
+  .learning-plan__title {
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0 0 16px 0;
+    color: #333;
+    text-align: center;
+  }
+  
+  .learning-plan__progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 16px;
+  }
+  
+  .learning-plan__progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    overflow: hidden;
+  }
+  
+  .learning-plan__progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.5s ease;
+  }
+  
+  .learning-plan__percentage {
+    font-size: 22px;
+    font-weight: 600;
+    color: #666;
+  }
+  
+  .learning-plan__status-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  
+  .learning-plan__status-badge {
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .learning-plan__days-remaining {
+    font-size: 18px;
+    color: #888;
+  }
+  
+  .learning-plan__dates {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  .learning-plan__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .learning-plan__date-label {
+    font-weight: 600;
+    color: #666;
+  }
+  
+  .learning-plan__section-title {
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    margin: 20px 0 8px 0;
+    text-align: center;
+  }
+  
+  .learning-plan__topic-list,
+  .learning-plan__resource-list {
+    margin: 0;
+    padding-left: 20px;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  
+  .learning-plan__topic-item,
+  .learning-plan__resource-item {
+    margin-bottom: 6px;
+  }
+  
+  .learning-plan__resource-item a {
+    color: #3498db;
+    text-decoration: none;
+    word-break: break-all;
+  }
+  
+  .learning-plan__resource-item a:hover {
+    text-decoration: underline;
+  }
+  
+  .learning-plan__footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+    margin-top: 16px;
+  }
+  
+  .learning-plan__action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .learning-plan__action i {
+    font-size: 20px;
+  }
+  
+  .learning-plan__action:hover {
+    color: #3498db;
+  }
+  
+  /* Comments section styles */
+  .learning-plan__comments-section {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .learning-plan__comments-list {
+    margin-bottom: 16px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .learning-plan__comment {
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .learning-plan__comment-author {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .learning-plan__comment-text {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .learning-plan__no-comments {
+    font-size: 14px;
+    color: #888;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .learning-plan__comment-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .learning-plan__comment-field {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  .learning-plan__comment-submit {
+    padding: 8px 16px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease;
+  }
+  
+  .learning-plan__comment-submit:hover {
+    background: #2980b9;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 576px) {
+    .learning-plan__card {
+      padding: 12px;
+    }
+    
+    .learning-plan__title {
+      font-size: 20px;
+    }
+    
+    .learning-plan__section-title {
+      font-size: 15px;
+    }
+    
+    .learning-plan__topic-list,
+    .learning-plan__resource-list {
+      font-size: 14px;
+    }
+    
+    .learning-plan__dates {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
+
+.posts__edit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+.posts__icon-btn {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.posts__icon-btn:hover {
+  color: #3498db;
+  background-color: #f5f5f5;
+}
+
+.posts__icon-btn.delete:hover {
+  color: #e74c3c;
+}
+
+.learning-plan__user-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%; 
+  position: relative;
+}
+
+.learning-plan__status-dropdown select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  background-color: white;
+}
+
+@media (max-width: 576px) {
+  .learning-plan__user-wrapper {
+    flex-wrap: wrap;
+  }
+  
+  .posts__edit-buttons {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}

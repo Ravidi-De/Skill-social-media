@@ -204,7 +204,7 @@ export default function Posts({ editable = false }) {
             <p className="posts__description">{post.description}</p>
             {renderPostMedia(post)}
           </div>
-
+          {/* Like and Comment actions */}
           <div className="posts__actions">
             <button className="posts__action-btn">
               👍 Like ({post.likes || 0})

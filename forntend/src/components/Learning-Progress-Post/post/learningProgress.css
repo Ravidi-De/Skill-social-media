@@ -1,0 +1,219 @@
+
+
+.learning-progress__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.learning-progress__card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  padding: 16px;
+  border: 1px solid #f0f0f0;
+}
+
+.learning-progress__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This ensures proper alignment */
+  margin-bottom: 8px;
+}
+
+.learning-progress__user-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1; /* Take remaining space */
+}
+
+.learning-progress__profile-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.learning-progress__name-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.learning-progress__name-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.learning-progress__user-name {
+  font-weight: 600;
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+}
+
+.learning-progress__skill-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.learning-progress__timestamp {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.learning-progress__actions {
+  display: flex;
+  gap: 8px; /* Add space between buttons */
+}
+
+.learning-progress__action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #95a5a6;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.learning-progress__action-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.learning-progress__edit-btn:hover {
+  color: #3498db;
+}
+
+.learning-progress__delete-btn:hover {
+  color: #e74c3c;
+}
+
+.learning-progress__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.learning-progress__level {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.learning-progress__progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.learning-progress__progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.learning-progress__progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.learning-progress__percentage {
+  font-size: 22px;
+  font-weight: 600;
+  color: #666;
+}
+
+.learning-progress__level-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.learning-progress__level-label {
+  font-size: 11px; /* Smaller font to fit on mobile */
+  color: #666;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.learning-progress__description {
+  font-size: 16px; /* Adjusted for better readability */
+  line-height: 1.5;
+  color: #333;
+  margin: 0;
+  max-width: 500px;
+}
+
+.learning-progress__footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 16px;
+}
+
+.learning-progress__action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #666;
+  font-size: 14px;
+  cursor: pointer; /* Add pointer cursor for better UX */
+}
+
+.learning-progress__action i {
+  font-size: 18px;
+}
+
+/* Empty state styling */
+.learning-progress__empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #888;
+  font-size: 16px;
+}
+
+/* Responsive styling */
+@media (max-width: 576px) {
+  .learning-progress__card {
+    padding: 12px;
+  }
+  
+  .learning-progress__level-labels {
+    font-size: 9px;
+  }
+  
+  .learning-progress__description {
+    font-size: 14px;
+  }
+  
+  .learning-progress__level-label {
+    font-size: 9px;
+  }
+}
